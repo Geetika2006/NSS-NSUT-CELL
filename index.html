@@ -14,22 +14,43 @@
     }
   </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-gradient-to-br from-red-100 via-yellow-100 to-orange-200 text-gray-800">
+
+
   <!-- Navbar -->
-  <header class="bg-red-600 text-white shadow sticky top-0 z-50">
+  <header class="bg-gradient-to-r from-red-300 via-orange-300 to-yellow-200 text-gray-800 shadow sticky top-0 z-50 border-b border-red-300">
+
+
+
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
        <div class="nav-flex ">
         <img class="logo" src="https://nssnsut.vercel.app/images/header-images/nss-logo.png" alt="">
         <h1 class="text-xl font-bold">NSS NSUT</h1>
          </div>
-        <nav class="space-x-6 hidden md:block">
-        <a href="#about" class="hover:text-yellow-300">About</a>
-        <a href="#initiatives" class="hover:text-yellow-300">Initiatives</a>
-        <a href="#gallery" class="hover:text-yellow-300">Gallery</a>
-        <a href="#contact" class="hover:text-yellow-300">Contact</a>
+         <nav class="space-x-6 hidden md:flex" id="nav-links">
+        <a href="#about" class="hover:text-white font-medium ">About</a>
+        <a href="#initiatives" class="hover:text-white font-medium">Initiatives</a>
+        <a href="#gallery" class="hover:text-white font-medium">Gallery</a>
+        <a href="#contact" class="hover:text-white font-medium">Contact</a>
       </nav>
+
+      <button class="md:hidden focus:outline-none" id="menu-button">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
-  </header>
+
+    <div class="md:hidden hidden px-4 pb-4 flex flex-col space-y-2" id="mobile-menu">
+    <a href="#about" class="hover:text-white font-medium">About</a>
+    <a href="#initiatives" class="hover:text-white font-medium">Initiatives</a>
+    <a href="#gallery" class="hover:text-white font-medium">Gallery</a>
+    <a href="#contact" class="hover:text-white font-medium">Contact</a>
+  </div>
+  
+</header>
+  
       <section>
         <div class="hero">
             <br><br><br>
@@ -37,12 +58,13 @@
   <!-- Hero Sectionstyle="background-image: url(https://nssnsut.vercel.app/images/index-images/nsut-banner.png);" -->
   <!-- <section class="bg-cover bg-center h-[80vh] flex items-center  py-44 justify-center text-center text-white" > -->
     
-                 <img class="img1"  src="https://nssnsut.vercel.app/images/index-images/nsut-banner.png" alt="" aria-hidden="true" class="default-ltr-cache-1g1tez4 e1veusjs0">
-                <img class ="img2" src="https://nssnsut.vercel.app/images/index-images/nsut-banner.png"  alt="" aria-hidden="true" class="default-ltr-cache-1g1tez4 e1veusjs0">
+                 <img class="img1 hero-img"  src="https://nssnsut.vercel.app/images/index-images/nsut-banner.png" alt="" aria-hidden="true" class="default-ltr-cache-1g1tez4 e1veusjs0">
+                <img class ="img2 hero-img" src="https://nssnsut.vercel.app/images/index-images/nsut-banner.png"  alt="" aria-hidden="true" class="default-ltr-cache-1g1tez4 e1veusjs0">
                 <div class="tint"></div>
              </div>
-    <div class="content bg-black bg-opacity-20 p-8 rounded-xl w-100vw">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4"><br><br><br><br>National Service Scheme - NSUT</h2>
+             
+    <div class="content bg-black bg-opacity-20 py-1px my-80px  rounded-xl w-100vw">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4"><br><br>National Service Scheme - NSUT</h2>
       <p class="text-lg md:text-xl">Not Me But You | Serving the Nation Through Selfless Acts</p> 
     </div> 
   <!-- </section> -->
@@ -56,18 +78,18 @@
   </section> 
 
   <!-- Initiatives Section -->
-  <section id="initiatives" class="py-16 px-6 md:px-16">
+  <section id="initiatives " class=" py-16 px-6 md:px-16">
     <h3 class="text-3xl font-semibold text-center mb-10">Our Initiatives</h3>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white shadow rounded-lg p-6 text-center">
+      <div class="faq bg-white shadow rounded-lg p-6 text-center">
         <h4 class="font-bold text-xl mb-2">Blood Donation Camps</h4>
         <p>Organized across campus, saving hundreds of lives every year.</p>
       </div>
-      <div class="bg-white shadow rounded-lg p-6 text-center">
+      <div class=" faq bg-white shadow rounded-lg p-6 text-center">
         <h4 class="font-bold text-xl mb-2">Cleanliness Drives</h4>
         <p>Promoting a cleaner, greener campus and city under Swachh Bharat.</p>
       </div>
-      <div class="bg-white shadow rounded-lg p-6 text-center">
+      <div class=" faq bg-white shadow rounded-lg p-6 text-center">
         <h4 class="font-bold text-xl mb-2">Awareness Campaigns</h4>
         <p>Workshops on mental health, gender sensitization, and civic duties.</p>
       </div>
@@ -77,11 +99,11 @@
   <!-- Gallery Section -->
   <section id="gallery" class="bg-gray-100 py-16 px-6 md:px-16">
     <h3 class="text-3xl font-semibold text-center mb-10">Recent Events</h3>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <img src="https://nssnsut.vercel.app/images/events-images/world-environment-day/cover.png" class="rounded-lg shadow" alt="Event" />
-      <img src="https://nssnsut.vercel.app/images/events-images/fake%20news/cover.jpg" class="rounded-lg shadow" alt="Event" />
-      <img src="https://nssnsut.vercel.app/images/events-images/Mock-drill-session/cover.PNG" class="rounded-lg shadow" alt="Event" />
-      <img src="https://nssnsut.vercel.app/images/events-images/water%20treatment%20session/Cover.jpg" class="rounded-lg shadow" alt="Event" />
+    <div class="grid grid-cols-2 md:grid-cols-4 s:grid-cols-2 gap-4">
+      <img class="post " src="https://nssnsut.vercel.app/images/events-images/world-environment-day/cover.png" class="rounded-lg shadow" alt="Event" />
+      <img class="post " src="https://nssnsut.vercel.app/images/events-images/fake%20news/cover.jpg" class="rounded-lg shadow" alt="Event" />
+      <img class="post " src="https://nssnsut.vercel.app/images/events-images/Mock-drill-session/cover.PNG" class="rounded-lg shadow" alt="Event" />
+      <img class="post " src="https://nssnsut.vercel.app/images/events-images/water%20treatment%20session/Cover.jpg" class="rounded-lg shadow" alt="Event" />
     </div>
   </section>
 
@@ -98,8 +120,16 @@
   </section> 
 
   <!-- Footer -->
-  <footer class="bg-red-600 text-white text-center py-4">
+  <footer class="bg-red-500 text-white text-center py-4">
     <p>&copy; 2025 NSS NSUT. All rights reserved.</p>
   </footer> 
+  <script>
+  const menuButton = document.getElementById('menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
 </body>
 </html>
